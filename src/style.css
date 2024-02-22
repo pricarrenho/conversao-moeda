@@ -1,0 +1,10 @@
+.input-radio {
+  width: 20px;
+  height: 20px;
+  accent-color: #008b57;
+}
+
+.background-default {
+  height: 100vh;
+  background-image: url(./assets/images/Mask.png);
+}
