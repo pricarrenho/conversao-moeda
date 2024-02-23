@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { TypeOfPurchase } from "../../context/types";
+import { useGlobalContext } from "../../hooks/useGlobalContext";
 
 export function InputRadio() {
-  const [valueSelected, setValueSelected] = useState("money");
+  const { handleChosenTypeOfPurchase, typeOfPurchase } = useGlobalContext();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValueSelected(event.target.value);
+    handleChosenTypeOfPurchase(event.target.value as TypeOfPurchase);
   };
 
   return (
@@ -16,7 +17,7 @@ export function InputRadio() {
           <input
             type="radio"
             value="money"
-            checked={valueSelected === "money"}
+            checked={typeOfPurchase === "money"}
             onChange={handleChange}
             className="input-radio"
           />
@@ -27,7 +28,7 @@ export function InputRadio() {
           <input
             type="radio"
             value="card"
-            checked={valueSelected === "card"}
+            checked={typeOfPurchase === "card"}
             onChange={handleChange}
             className="input-radio"
           />

@@ -23,7 +23,7 @@ export function Header() {
       <div className="col-5">
         <div className="d-flex flex-column gap-1">
           <p className="fs-5 fw-medium m-0">
-            {`${formattedDate()} | ${formattedHour()}`}
+            {`${formattedDate().dateFormatText} | ${formattedHour()}`}
           </p>
 
           <p className="m-0">
