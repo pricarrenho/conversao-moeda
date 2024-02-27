@@ -32,7 +32,9 @@ export function Home() {
               />
             </div>
 
-            {error && <p className="text-danger">{error}</p>}
+            <div style={{ height: "16px" }}>
+              <p className="text-danger">{error}</p>
+            </div>
           </div>
 
           <InputRadio />
