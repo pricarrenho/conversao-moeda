@@ -1,4 +1,4 @@
-import { formattedDate } from "../../utils/date";
+import { formattedDate } from "../../utils/formattedDate";
 import { api } from "../api";
 
 export async function getValueDollar() {
@@ -9,6 +9,7 @@ export async function getValueDollar() {
       "@dataCotacao": `'${dateFormat}'`,
       $top: "100",
       $format: "json",
+      $select: "cotacaoCompra",
     },
   });
 }

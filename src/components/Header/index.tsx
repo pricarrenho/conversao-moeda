@@ -1,11 +1,11 @@
 import { Logo } from "../../assets/svg/Logo";
-import { formattedDate } from "../../utils/date";
-import { formattedHour } from "../../utils/hour";
+import { formattedDate } from "../../utils/formattedDate";
+import { formattedHour } from "../../utils/formattedHour";
 
 export function Header() {
   return (
-    <header className="row gap-5">
-      <div className="col-2">
+    <header className="row gap-3 gap-lg-5 ">
+      <div className="col-10 col-lg-2">
         <div className="d-flex flex-column gap-1">
           <Logo color="#00A868" />
 
@@ -20,7 +20,7 @@ export function Header() {
         </div>
       </div>
 
-      <div className="col-5">
+      <div className="col">
         <div className="d-flex flex-column gap-1">
           <p className="fs-5 fw-medium m-0">
             {`${formattedDate().dateFormatText} | ${formattedHour()}`}

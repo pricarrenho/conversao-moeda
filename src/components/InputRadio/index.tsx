@@ -5,7 +5,7 @@ export function InputRadio() {
   const { handleChosenTypeOfPurchase, typeOfPurchase } = useGlobalContext();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    handleChosenTypeOfPurchase(event.target.value as TypeOfPurchase);
+    handleChosenTypeOfPurchase(event.currentTarget.value as TypeOfPurchase);
   };
 
   return (

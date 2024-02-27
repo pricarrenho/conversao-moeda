@@ -1,29 +1,23 @@
+import { NumericFormat } from "react-number-format";
 import { InputProps } from "./types";
 
-export function Input({
-  name,
-  type,
-  placeholder,
-  onChange,
-  value,
-  ...props
-}: InputProps) {
+export function Input({ name, placeholder, onChange, value }: InputProps) {
   return (
     <div className="d-flex flex-column">
       <label htmlFor={name} className="fw-medium">
         {placeholder}
       </label>
 
-      <input
-        id={name}
+      <NumericFormat
         className="border p-2 rounded shadow-sm"
-        name={name}
-        type={type}
+        thousandSeparator=","
+        prefix="$ "
+        placeholder="$ 0"
+        decimalScale={2}
         onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-          onChange(Number(event.target.value))
+          onChange(event.target.value)
         }
         value={value}
-        {...props}
       />
     </div>
   );
