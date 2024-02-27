@@ -1,13 +1,13 @@
-import { Logo } from "../../assets/svg/Logo";
+import logo from "../../assets/images/logo.jpg";
 import { formattedDate } from "../../utils/formattedDate";
 import { formattedHour } from "../../utils/formattedHour";
 
 export function Header() {
   return (
-    <header className="row gap-3 gap-lg-5 ">
+    <header className="row gap-3 gap-lg-5 align-items-center">
       <div className="col-10 col-lg-2">
         <div className="d-flex flex-column gap-1">
-          <Logo color="#00A868" />
+          <img src={logo} alt="" style={{ height: 60, width: 120 }} />
 
           <div className="d-flex align-items-center gap-2">
             <div
@@ -27,7 +27,15 @@ export function Header() {
           </p>
 
           <p className="m-0">
-            Dados de câmbio disponibilizados pela Morningstar.
+            Dados de câmbio disponibilizados pelo{" "}
+            <a
+              href="https://dadosabertos.bcb.gov.br/"
+              target="_blank"
+              className="link-success link-underline-opacity-0"
+            >
+              Banco Central do Brasil
+            </a>
+            .
           </p>
         </div>
       </div>
