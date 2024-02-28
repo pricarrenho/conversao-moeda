@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { getValueDollar } from "../../services/coin";
 import { ValueDollarProps } from "./types";
 import * as yup from "yup";
+import { moneyMask } from "../../utils/moneyMask";
 
 export const useHome = () => {
   const navigate = useNavigate();
@@ -38,7 +39,7 @@ export const useHome = () => {
         { abortEarly: false }
       );
 
-      const numberValue = parseFloat(inputCoinValue.replace(/[^0-9.-]+/g, ""));
+      const numberValue = Number(moneyMask(inputCoinValue));
 
       if (typeOfPurchase === "money") {
         handleTotalValue(

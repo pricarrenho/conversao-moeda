@@ -3,6 +3,7 @@ import { Input } from "../../components/Input";
 import { InputRadio } from "../../components/InputRadio";
 import { Button } from "../../components/Button";
 import { useHome } from "./useHome";
+import { moneyMask } from "../../utils/moneyMask";
 
 export function Home() {
   const {
@@ -28,7 +29,7 @@ export function Home() {
                   handleInputCoinValue(e);
                   validateInputCoinValue(e);
                 }}
-                value={inputCoinValue}
+                value={moneyMask(inputCoinValue, true)}
               />
             </div>
 

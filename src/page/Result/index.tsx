@@ -27,7 +27,7 @@ export function Result() {
             </p>
 
             <h2 className="fw-medium fs-1 text-success">
-              {formattedPrice.format(totalValue)}
+              {formattedPrice(totalValue)}
             </h2>
           </div>
 
@@ -38,7 +38,7 @@ export function Result() {
             </p>
             <p className="text-light-emphasis">
               <span className="fw-medium">Cotação do dólar: </span>
-              {formattedPrice.format(valueDollar)}
+              {formattedPrice(valueDollar)}
             </p>
           </div>
         </main>
