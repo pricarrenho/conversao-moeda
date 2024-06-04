@@ -26,6 +26,7 @@ export function Home() {
           <div className="d-flex flex-column align-items-start gap-1">
             <div>
               <Input
+                inputMode="numeric"
                 name="coin"
                 placeholder="Dólar"
                 onChange={(e) => {

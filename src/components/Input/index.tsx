@@ -1,6 +1,12 @@
 import { InputProps } from "./types";
 
-export function Input({ name, placeholder, onChange, value }: InputProps) {
+export function Input({
+  name,
+  placeholder,
+  onChange,
+  value,
+  ...props
+}: InputProps) {
   return (
     <div className="d-flex flex-column">
       <label htmlFor={name} className="fw-medium">
@@ -8,6 +14,7 @@ export function Input({ name, placeholder, onChange, value }: InputProps) {
       </label>
 
       <input
+        {...props}
         id={name}
         className="border p-2 rounded shadow-sm"
         name={name}
