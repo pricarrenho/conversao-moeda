@@ -19,7 +19,10 @@ export function Home() {
       <div className="container d-flex flex-column gap-2 gap-lg-5 pt-5">
         <Header />
 
-        <main className="d-flex flex-column gap-4 mt-5">
+        <form
+          className="d-flex flex-column gap-4 mt-5"
+          onSubmit={handleConvert}
+        >
           <div className="d-flex flex-column align-items-start gap-1">
             <div>
               <Input
@@ -40,14 +43,10 @@ export function Home() {
 
           <InputRadio />
 
-          <Button
-            styleType="btn-secondary"
-            icon="change"
-            onClick={handleConvert}
-          >
+          <Button type="submit" styleType="btn-secondary" icon="change">
             Converter
           </Button>
-        </main>
+        </form>
       </div>
     </div>
   );
